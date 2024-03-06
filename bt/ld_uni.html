@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Marcellus"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant Garamond"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./animate.css" />
+    <link rel="stylesheet" href="./slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .landing-universe {
+        position: relative;
+        height: 1091px;
+        background: url("./img/ld_uni/asset_uni_bg.png") no-repeat center;
+        background-size: cover;
+      }
+      .landing-universe h2 {
+        position: absolute;
+        top: 39%;
+        right: 60px;
+        z-index: 1;
+        font-size: 82px;
+        color: #fff;
+      }
+      .uni-float {
+        position: absolute;
+        z-index: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .float-spaceman {
+        left: 155px;
+        bottom: 83px;
+        width: 463px;
+        height: 418px;
+        background-image: url("./img/ld_uni/asset_uni_spaceman.png");
+        animation: bounce-spaceman 3s ease-in-out infinite;
+      }
+      .float-star-pp {
+        right: 33%;
+        top: 180px;
+        width: 378px;
+        height: 225px;
+        background-image: url("./img/ld_uni/asset_uni_star_pp.png");
+        animation: bounce-starP 3s ease-in-out infinite;
+      }
+      .float-star-sm {
+        right: 35%;
+        bottom: 243px;
+        width: 156px;
+        height: 155px;
+        background-image: url("./img/ld_uni/asset_uni_star_sm.png");
+        animation: bounce-starS 3s ease-in-out infinite;
+      }
+      .float-star-lg {
+        right: 155px;
+        bottom: 139px;
+        width: 253px;
+        height: 253px;
+        background-image: url("./img/ld_uni/asset_uni_star_lg.png");
+      }
+      .shooting-stars span:nth-child(1) {
+        right: -27%;
+        animation-duration: 2.5s;
+        animation-delay: 0.4s;
+      }
+      .shooting-stars span:nth-child(2) {
+        right: -10%;
+        animation-duration: 3s;
+        animation-delay: 0s;
+      }
+      .shooting-stars span:nth-child(3) {
+        right: 10%;
+        animation-duration: 2s;
+        animation-delay: 0.2s;
+      }
+      .shooting-stars span:nth-child(4) {
+        right: 26%;
+        animation-duration: 1.5s;
+        animation-delay: 0.6s;
+      }
+      .shooting-stars span:nth-child(5) {
+        right: 51%;
+        animation-duration: 1s;
+        animation-delay: 0.8s;
+      }
+      .shooting-stars span:nth-child(6) {
+        right: 66%;
+        animation-duration: 3s;
+        animation-delay: 1s;
+      }
+      .shooting-stars span:nth-child(7) {
+        right: 84%;
+        animation-duration: 1.75s;
+        animation-delay: 1.2s;
+      }
+      .shooting-star {
+        position: fixed;
+        right: 10%;
+        top: 10%;
+        width: 2px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #fff;
+        animation: shooting 3s ease-in-out infinite;
+        transform: rotate(135deg);
+      }
+      .shooting-star:before {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 1px;
+        top: 0;
+        width: 130px;
+        height: inherit;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+      }
+
+      @keyframes shooting {
+        0% {
+          transform: rotate(135deg) translateX(0);
+          opacity: 1;
+        }
+        70% {
+          opacity: 1;
+        }
+        100% {
+          transform: rotate(135deg) translateX(1250px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes bounce-spaceman {
+        0% {
+          bottom: 106px;
+        }
+        50% {
+          bottom: 83px;
+        }
+        100% {
+          bottom: 106px;
+        }
+      }
+
+      @keyframes bounce-starP {
+        0% {
+          top: 166px;
+        }
+        50% {
+          top: 180px;
+        }
+        100% {
+          top: 166px;
+        }
+      }
+
+      @keyframes bounce-starS {
+        0% {
+          bottom: 229px;
+        }
+        50% {
+          bottom: 243px;
+        }
+        100% {
+          bottom: 229px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <main class="sub">
+        <section class="subContent">
+          <div class="landing-universe">
+            <h2>
+              <p>노력을 배신하지 않는</p>
+              <p>게임 개발자 취업 프로젝트</p>
+            </h2>
+            <span class="uni-float float-spaceman"></span>
+            <span class="uni-float float-star-pp"></span>
+            <span class="uni-float float-star-sm"></span>
+            <span class="uni-float float-star-lg"></span>
+            <div class="shooting-stars">
+              <span class="shooting-star"></span>
+              <span class="shooting-star"></span>
+              <span class="shooting-star"></span>
+              <span class="shooting-star"></span>
+              <span class="shooting-star"></span>
+              <span class="shooting-star"></span>
+              <span class="shooting-star"></span>
+            </div>
+          </div>
+
+          <div class="container tuition-no-border">
+            <!-- 공통 수강료 조회 -->
+            <!--#include virtual = "/inc/seminarTuition.asp"-->
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- //wrap -->
+    <script src="./plugin/jquery.min.js"></script>
+    <script src="./plugin/TweenMax.min.js"></script>
+    <script src="./plugin/ScrollMagic.js"></script>
+    <script src="./plugin/animation.gsap.js"></script>
+    <script src="./plugin/debug.addIndicators.min.js"></script>
+    <script src="./plugin/slick.min.js"></script>
+    <script src="./plugin/wow.js"></script>
+    <script src="./plugin/rellax.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
